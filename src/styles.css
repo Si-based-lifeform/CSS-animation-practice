@@ -1,1 +1,90 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  margin: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: url("src/assets/bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parent {
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.child {
+  background-color: ghostwhite;
+  height: 40%;
+  width: 25%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  border-top-left-radius: 45%;
+  border-top-right-radius: 45%;
+  transition: transform 1s ease-in;
+}
+
+.parent:hover .child {
+  animation: first-animation 4s linear infinite;
+}
+
+@keyframes first-animation {
+  0% {
+    transform: translate(-50%, -50%); /* Start at the center of the parent */
+  }
+  25% {
+    transform: translate(100%, -100%); /* Move to the right edge */
+  }
+  50% {
+    transition: ease;
+    transform: translate(170%, 100%); /* Move to the bottom right corner */
+  }
+  75% {
+    transform: translate(-100%, 50%); /* Move to the bottom left corner */
+  }
+  100% {
+    transform: translate(-50%, -50%); /* Return to the center */
+  }
+}
+
+.child .eyes {
+  position: absolute;
+  border-radius: 50%;
+  height: 40px;
+  width: 30px;
+  top: 10%;
+  left: 90%;
+}
+
+.child .eye_one {
+  transform: translate(-150%, 0%);
+  background-color: rgba(0, 0, 0, 0.89);
+}
+
+.child .eye_two {
+  transform: translate(-320%, 0%);
+  background-color: rgba(0, 0, 0, 0.89);
+}
+
+.mouth {
+  position: absolute;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  top: 35%;
+  left: 70%;
+  transform: translate(-170%, 0%);
+  background-color: rgba(0, 0, 0, 0.89);
+}
