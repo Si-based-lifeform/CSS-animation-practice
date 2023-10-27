@@ -37,10 +37,10 @@ html, body {
 }
 
 .parent:hover .child {
-  animation: first-animation 4s linear infinite;
+  animation: my-first-animation 4s linear infinite;
 }
 
-@keyframes first-animation {
+@keyframes my-first-animation {
   0% {
     transform: translate(-50%, -50%);
   }
